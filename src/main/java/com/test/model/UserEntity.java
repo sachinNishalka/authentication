@@ -1,6 +1,8 @@
 package com.test.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,4 +16,7 @@ public class UserEntity {
     private Long id;
     private String username;
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }
